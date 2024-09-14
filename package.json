@@ -1,5 +1,5 @@
 {
-  "name": "dijikala-backend",
+  "name": "digikala-backend",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -34,12 +34,13 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "dotenv": "^16.4.5",
-    "mysql2": "^3.11.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
+    "pg": "^8.12.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
+    "slugify": "^1.6.6",
     "swagger-themes": "^1.4.3",
     "typeorm": "^0.3.20"
   },
