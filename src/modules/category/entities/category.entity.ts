@@ -1,5 +1,6 @@
 import { BaseEntity } from "src/common/abstracts/baseEntity";
 import { EntityNames } from "src/common/enums";
+import { ProductEntity } from "src/modules/product/entities";
 import { Column, CreateDateColumn, Entity, ManyToOne, OneToMany, UpdateDateColumn } from "typeorm";
 
 @Entity(EntityNames.Category)
@@ -19,5 +20,7 @@ export class CategoryEntity extends BaseEntity {
     created_at:Date
     @UpdateDateColumn()
     updated_at:Date
+    @OneToMany(()=>ProductEntity,product=>product.category)
+    products:ProductEntity[]
     
 }

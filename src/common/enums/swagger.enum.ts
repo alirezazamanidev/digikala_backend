@@ -2,7 +2,8 @@
 
 export enum SwaggerTags {
     Auth='Auth',
-    Category='Category'
+    Category='Category',
+    Product='Product'
    
 }
 

@@ -1,7 +1,8 @@
 import { BaseEntity } from "src/common/abstracts/baseEntity";
 import { EntityNames } from "src/common/enums";
-import { Column, CreateDateColumn, Entity, JoinColumn, OneToOne, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, OneToMany, OneToOne, UpdateDateColumn } from "typeorm";
 import { UserOtpEntity } from "./otp.entity";
+import { ProductEntity } from "src/modules/product/entities";
 
 @Entity(EntityNames.User)
 export class UserEntity extends BaseEntity {
@@ -26,5 +27,7 @@ export class UserEntity extends BaseEntity {
     @OneToOne(() => UserOtpEntity, (otp) => otp.user, { onDelete: 'CASCADE' })
     @JoinColumn({ name: 'otpId' })
     otp: UserOtpEntity;
+    @OneToMany(()=>ProductEntity,product=>product.supplier)
+    products:ProductEntity[]
   
 }
