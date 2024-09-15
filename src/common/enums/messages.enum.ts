@@ -29,7 +29,8 @@ export enum AuthMessage {
   export enum BadRequestMessage {
     InvalidCategories = 'دسته بندی ها را به درستی وارد کنید!',
     NotMonyInWallet = 'مبلغ کیف پول شما  برای ایجاد اگهی کافی نمی باشد! لطفا برای شارژ کیف پول اقدام نمایید!',
-    InvalidType='تایپ محصول نادرست است!'
+    InvalidType='تایپ محصول نادرست است!',
+    
   }
   export enum NotFoundMessage {
     NotFound = 'موردی یافت نشد!',
@@ -39,6 +40,7 @@ export enum AuthMessage {
     Post='آگهی یافت نشد!',
     Package='پکیجی یافت نشد!',
     Conversartion='چت یافت نشد',
+    Product='محصول یافت نشد!',
     Slider='اسلایدری یافت نشد!'
   }
   export enum ValidationMesaage {

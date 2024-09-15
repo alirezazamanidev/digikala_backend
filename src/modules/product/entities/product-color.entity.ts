@@ -12,7 +12,7 @@ export class ProductColorEntity extends BaseEntity {
   @Column()
   color_code: string;
   @Column()
-  ccount: number;
+  count: number;
   @Column()
   price: number;
   @Column({ default: 0 })
