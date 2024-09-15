@@ -30,7 +30,7 @@ export enum AuthMessage {
     InvalidCategories = 'دسته بندی ها را به درستی وارد کنید!',
     NotMonyInWallet = 'مبلغ کیف پول شما  برای ایجاد اگهی کافی نمی باشد! لطفا برای شارژ کیف پول اقدام نمایید!',
     InvalidType='تایپ محصول نادرست است!',
-    
+
   }
   export enum NotFoundMessage {
     NotFound = 'موردی یافت نشد!',
@@ -48,7 +48,7 @@ export enum AuthMessage {
   }
   
   export enum ConflictMessage {
-    Resume = 'رزومه شما قبلا برای این آگهی ارسال شده است!',
+    Discount='چنین کد تخفیفی قبلا با این کد ثبت شده است!',
     Title = 'چنین موردی قبلا با این عنوان ثبت شده است!',
     Slug = 'چنین موردی قبلا با این اسلاگ ایجاد شده است!',
   }

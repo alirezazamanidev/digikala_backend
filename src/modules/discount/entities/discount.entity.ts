@@ -1,14 +1,16 @@
 import { BaseEntity } from "src/common/abstracts/baseEntity";
-import { Column } from "typeorm";
+import { Column, Entity } from "typeorm";
 import { DiscountType } from "../enums";
+import { EntityNames } from "src/common/enums";
 
+@Entity(EntityNames.Discount)
 export class DiscountEntity extends BaseEntity {
     @Column()
     code:string
     @Column({nullable:true})
     percent:number
     @Column({nullable:true})
-    amount:string
+    amount:number
     @Column({nullable:true})
     limit:number
     @Column({default:0})

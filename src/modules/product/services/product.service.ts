@@ -1,10 +1,10 @@
-import { BadRequestException, ConflictException, forwardRef, Inject, Injectable, Scope } from '@nestjs/common';
+import { BadRequestException, ConflictException, forwardRef, Inject, Injectable, NotFoundException, Scope } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ProductEntity } from '../entities';
 import { DeepPartial, Repository } from 'typeorm';
 import { CreateProductDto } from '../dtos';
 import { toBoolean } from 'src/common/utils';
-import { BadRequestMessage, ConflictMessage, PublicMessage } from 'src/common/enums';
+import { BadRequestMessage, ConflictMessage, NotFoundMessage, PublicMessage } from 'src/common/enums';
 import slugify from 'slugify';
 import { ProductType } from '../enums';
 import { REQUEST } from '@nestjs/core';
@@ -61,6 +61,12 @@ export class ProductService {
     return {
         message:PublicMessage.Created
     }
+  }
+
+  async findOneById(id:number){
+    const product=await this.productRepository.findOne({where:{id},select:{id:true}});
+    if(!product) throw new NotFoundException(NotFoundMessage.Product);
+    return product;
   }
 
   async checkExitBySlug(slug: string) {

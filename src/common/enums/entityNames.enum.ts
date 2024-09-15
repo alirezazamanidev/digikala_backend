@@ -7,5 +7,6 @@ export enum EntityNames {
     Product='product',
     ProductColor='product_color',
     ProductDetail='product_detail',
-    ProductSize='product_size'
+    ProductSize='product_size',
+    Discount='discount'
 }
