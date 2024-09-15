@@ -51,6 +51,9 @@ export class DiscountService {
       message: PublicMessage.Created,
     };
   }
+  async listOfDiscount(){
+    return await this.discountRepository.find({});
+  }
 
   async checkExitByCode(code: string) {
     const discount = await this.discountRepository.findOneBy({ code });
