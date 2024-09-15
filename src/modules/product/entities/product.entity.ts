@@ -10,7 +10,7 @@ import {
 } from 'typeorm';
 import { ProductType } from '../enums';
 import { ProductColorEntity } from './product-color.entity';
-import { ProductDetailEntity } from './product-dectail.entiy';
+import { ProductDetailEntity } from './product-dectail.entity';
 import { ProductSizeEntity } from './product-size.entity';
 import { UserEntity } from 'src/modules/user/entities';
 import { CategoryEntity } from 'src/modules/category/entities';
@@ -27,7 +27,7 @@ export class ProductEntity extends BaseEntity {
   supplierId:number
   @Column()
   categoryId:number
-  @Column({ unique: true })
+  @Column({ })
   productCode: string;
   @Column({ enum: ProductType })
   type: string;
@@ -36,9 +36,9 @@ export class ProductEntity extends BaseEntity {
   @Column({ nullable: true })
   price: number;
   @Column({ nullable: true, default: 0 })
-  disCount: number;
+  discount: number;
   @Column({ nullable: true, default: false })
-  active_disCount: boolean;
+  active_discount: boolean;
   @CreateDateColumn()
   created_at: Date;
   @UpdateDateColumn()

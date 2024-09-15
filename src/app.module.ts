@@ -7,10 +7,16 @@ import { CategoryModule } from './modules/category/category.module';
 import { ProductModule } from './modules/product/product.module';
 
 @Module({
-  imports: [TypeOrmModule.forRootAsync({
-    useClass:TypeOrmDbConfig,
-    inject:[TypeOrmModule]
-  }), UserModule, AuthModule, CategoryModule, ProductModule],
-  providers:[TypeOrmDbConfig]
+  imports: [
+    TypeOrmModule.forRootAsync({
+      useClass: TypeOrmDbConfig,
+      inject: [TypeOrmModule],
+    }),
+    UserModule,
+    AuthModule,
+    CategoryModule,
+    ProductModule,
+  ],
+  providers: [TypeOrmDbConfig],
 })
 export class AppModule {}
