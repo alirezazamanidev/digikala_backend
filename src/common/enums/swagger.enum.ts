@@ -5,8 +5,8 @@ export enum SwaggerTags {
     Category='Category',
     Product='Product',
     ProductColor='Product_Color',
-    Discount='Discount'
-   
+    Discount='Discount',
+   Basket='Basket'
 }
 
 export enum ContentType {

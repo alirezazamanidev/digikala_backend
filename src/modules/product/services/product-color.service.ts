@@ -68,4 +68,9 @@ export class ProductColorService {
       throw error;
     }
   }
+  async findOneById(id:number){
+    let color=await this.productColorRepository.findOneBy({id});
+    if(!color) throw new NotFoundException(NotFoundMessage.Product);
+    return color; 
+  }
 }

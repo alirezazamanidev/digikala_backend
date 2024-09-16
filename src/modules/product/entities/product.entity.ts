@@ -14,6 +14,7 @@ import { ProductDetailEntity } from './product-dectail.entity';
 import { ProductSizeEntity } from './product-size.entity';
 import { UserEntity } from 'src/modules/user/entities';
 import { CategoryEntity } from 'src/modules/category/entities';
+import { BasketEntity } from 'src/modules/basket/entities/basket.entity';
 
 @Entity(EntityNames.Product)
 export class ProductEntity extends BaseEntity {
@@ -53,4 +54,6 @@ export class ProductEntity extends BaseEntity {
   supplier:UserEntity
   @ManyToOne(()=>CategoryEntity,category=>category.products,{onDelete:'CASCADE'})
   category:CategoryEntity
+  @OneToMany(() => BasketEntity, (basket) => basket.discount)
+  baskets: BasketEntity[];
 }

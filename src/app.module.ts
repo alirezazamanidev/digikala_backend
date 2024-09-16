@@ -6,6 +6,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { CategoryModule } from './modules/category/category.module';
 import { ProductModule } from './modules/product/product.module';
 import { DiscountModule } from './modules/discount/discount.module';
+import { BasketModule } from './modules/basket/basket.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { DiscountModule } from './modules/discount/discount.module';
     CategoryModule,
     ProductModule,
     DiscountModule,
+    BasketModule,
   ],
   providers: [TypeOrmDbConfig],
 })

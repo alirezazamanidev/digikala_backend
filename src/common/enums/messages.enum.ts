@@ -9,6 +9,7 @@ export enum AuthMessage {
     LoginAgain = 'مجددا وارد حساب کاربری خود شوید',
   }
   export enum PublicMessage {
+    AddToBasket='محصول به سبد خرید افزوده شد',
     SendOtp = 'کد تایید با موفقیت ارسال شد',
     LoggedIn = 'با موفقیت وارد حساب کاربری خود شدید',
     Logout = 'با موفقیت از حساب کاربری خود خارج شدید!',
